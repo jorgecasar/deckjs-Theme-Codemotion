@@ -7,7 +7,7 @@
 }
 #header {
 	top:0;
-	padding:0 48px;
+	padding: 0;
 	background:#9bc8d7;
 }
 #header h1, #header .eventData {
@@ -15,16 +15,18 @@
 	vertical-align:middle;
 }
 #header h1 {
-	width:200px;
-	height:75px;
+	width: 55%;
 	text-indent:-999em;
 	background:url(img/codemotion-logo.png) no-repeat;
+	margin-left: 5%;
+	font-size: 2em;
+	background-size: contain;
 }
 #header img { max-width:100%; }
 #header .eventData {
-	width:770px;
+	width: 34%;
 	text-align:right;
-	padding:15px;
+	padding: 15px 5% 15px 0;
 }
 #header .eventData strong{
 	text-transform:uppercase;
@@ -39,26 +41,25 @@
 }
 
 #footer {
-	margin:0 48px;
 	padding:5px 0;
 	border-top:2px solid #333;
 }
-#footer small, #footer .vcard, #footer .deck-status {
+#footer .license, #footer .vcard, #footer .deck-status {
 	position:static;
 	display:inline-block;
 	vertical-align:middle;
 }
-#footer small {
+#footer .license {
 	font-size:10px;
-	width:370px;
+	width: 44%;
 	color:#888;
 }
 #footer .vcard {
-	width:430px;
+	width: 44%;
 	text-align:right;
 }
 #footer .deck-status {
-	width:110px;
+	width: 10%;
 	text-align:right;
 	font-size:20px;
 	color:#333;
@@ -67,6 +68,7 @@
 	display:inline-block;
 	padding-left:75px;
 	background:url(img/creativeCommons.png) no-repeat left center;
+	box-sizing: border-box;
 }
 #footer strong {
 	display:block;
@@ -98,6 +100,7 @@ body > footer {
 .csstransitions.csstransforms body.deck-container:not(.deck-menu) > .slide
 {
 	padding:10% 5%;
+	height:100%;
 }
 
 .deck-container .slide h1, .deck-container .slide h2, .deck-container .slide h3, .deck-container .slide h4, .deck-container .slide h5, .deck-container .slide h6 {
@@ -309,11 +312,34 @@ body > footer {
 
 .deck-container .codemotion-twitter {
 	position:absolute;
-	top:80px;
-	right:48px;
+	bottom: 25%;
+	right: 5%;
 	padding-top:160px;
 	padding-left:100px;
 	background:url(./img/codemotion-twitter.png) no-repeat top center;
 	font-size:11px;
 	color:#CE1F24;
+}
+
+.deck-container .deck-prev-link {
+	left:-32px;
+}
+.deck-container .deck-next-link {
+	right:-32px;
+}
+
+@media screen and (max-width: 800px) {
+	#footer .license {
+		width: 100%;
+		margin-bottom:10px;
+	}
+	#footer .vcard {
+		width: 80%;
+	}
+	#footer .deck-status {
+		width: 18%;
+	}
+	.deck-container .codemotion-twitter {
+		background:none;
+	}
 }
